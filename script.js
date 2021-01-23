@@ -38,12 +38,13 @@ const handleCellClick = (e) => {
   turn
     ? player1.push(Number(e.target.dataset.number))
     : player2.push(Number(e.target.dataset.number));
+  e.target.classList.add("clicked");
   if (turn ? checker(player1) : checker(player2)) {
     whosTurn.innerText = turn ? "player x wins" : "player o wins";
     disableBoard();
+    return null;
   }
   turn = !turn;
-  e.target.classList.add("clicked");
   if (counter > 8) {
     whosTurn.innerText = "draw";
     console.log("this is he end");

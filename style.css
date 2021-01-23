@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #4c5b61;
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.title {
+  margin-top: 5vh;
+  font-size: 200%;
+  margin: 40px;
+  padding: 20px;
+  text-align: center;
+}
+.title span {
+  color: rgb(210, 210, 255);
+}
+.game {
+  margin-top: 5vh;
+  background-color: #09d9ed;
+  border-radius: 10px;
+  padding: 30px;
+}
+.info {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 40px;
+}
+.board {
+  background-image: url(./pewdiepie-red-and-black-wavy-background-uhd-4k-wallpaper.jpg);
+  background-size: 100px 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 8px;
+}
+.cell {
+  background-color: #09d9ed;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 200%;
+  color: chocolate;
+  transition: all ease 250ms;
+}
+.clicked {
+  font-size: 600%;
+  pointer-events: none;
+}
+.fa-circle-o {
+  color: aquamarine;
+}
+.disabled {
+  pointer-events: none;
+}

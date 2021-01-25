@@ -61,8 +61,8 @@ const handleCellClick = (e) => {
   }
   turn = !turn;
   if (counter > 8) {
-    whosTurn.innerText = "draw";
-    console.log("this is he end");
+    overlay.classList.add("reveal");
+       result.innerText = "draw";
     disableBoard;
   }
 };
